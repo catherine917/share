@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        ul {
+            padding: 0;
+            border: 1px solid red;
+            list-style: none;
+        }
+
+        ul>li {
+            width: 100px;
+            background-color: #8cacea;
+            margin: 8px;
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .flex-container {
+            display: flex;
+        }
+        .row-reverse{
+            flex-direction: row-reverse;
+        }
+        .column{
+            flex-direction: column;
+        }
+        .column-reverse{
+            flex-direction: column-reverse;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>flex direction:row</h2>
+    <ul class="flex-container">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <h2>flex direction:row-reverse</h2>
+    <ul class="flex-container row-reverse">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <h2>flex direction:column</h2>
+    <ul class="flex-container column">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <h2>flex direction:column-reverse</h2>
+    <ul class="flex-container column-reverse">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</body>

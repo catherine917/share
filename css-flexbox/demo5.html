@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        ul {
+            padding: 0;
+            border: 1px solid red;
+            list-style: none;
+        }
+
+        ul>li {
+            width: 100px;
+            background-color: #8cacea;
+            margin: 8px;
+            color: #fff;
+            text-align: center;
+        }
+        ul li:nth-child(1){
+            line-height: 50px;
+        }
+
+        ul li:nth-child(2){
+            line-height: 100px;
+        }
+
+        ul li:nth-child(3){
+            line-height: 150px;
+        }
+
+        .flex-container {
+            display: flex;
+        }
+
+        .flex-start {
+            align-items: flex-start;
+        }
+
+        .flex-end {
+            align-items: flex-end;
+        }
+
+        .center {
+            align-items: center;
+        }
+        .baseline {
+            align-items: baseline;
+        }
+        .stretch {
+            align-items: stretch;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>align-items:flex-start</h2>
+    <ul class="flex-container flex-start">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <h2>align-items:flex-end</h2>
+    <ul class="flex-container flex-end">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <h2>align-items:center</h2>
+    <ul class="flex-container center">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <h2>align-items:baseline</h2>
+    <ul class="flex-container baseline">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <h2>align-items:stretch</h2>
+    <ul class="flex-container stretch">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</body>
