@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <title>浅谈Flexbox</title>
+  <meta name="author" content="zhang.wei">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1">
+  <link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/paper.css" id="theme">
+
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+
+  <link rel="stylesheet" href="css/demo/icon-github.css">
+
+  <link rel="stylesheet" href="css-flexbox/css/flexbox.css">
+
+
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+</head>
+
+<body>
+
+  <div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+      <section data-background-transition="slide" data-background="css-flexbox/img/bg.jpg">
+        <p class="title">浅谈Flexbox</p>
+        <p class="author">
+          <br>张韦  2017-11-23</br>
+        </p>
+      </section>
+
+      <section>
+        <h1>原始社会</h1>
+        <ul>
+          <li>table</li>
+          <li>margin</li>
+          <li>float</li>
+          <li>display:table</li>
+        </ul>
+      </section>
+
+      <section>
+          <h1>问题是？</h1>
+          <h2>产品需求：</h2>
+          <ul>
+            <li>这个改成从右到左排列吧</li>
+            <li class="fragment">上下布局改成左右布局吧</li>
+            <li class="fragment">一行多放几列看看</li>
+          </ul>
+      </section>
+
+      <section>
+          <h1>程序员：。。。</h1>
+          <img src="img/b.jpg" width="500" alt="">
+      </section>
+
+      <section>
+          <h1>智能布局时代到来  Flexbox</h1>
+        </section>
+
+      <section>
+        <h1>Flexbox是什么？</h1>
+        <p>Flexbox模块提供了一个有效的布局方式，即使不知道视窗大小或者未知元素情况之下都可以智能的，灵活的调整和分配元素和空间两者之间的关系。</p>
+      </section>
+
+      <section>
+        <h1>如何使用Flexbox？</h1>
+        <ul class="fragment">
+          <li>伸缩容器（Flex Container):父元素显式设置了display:flex/inline-flex</li>
+          <li>伸缩项目（Flex Items):伸缩容器内的子元素</li>
+        </ul>
+      </section>
+
+      <section>
+        <h1>基本要素</h1>
+        <img src="css-flexbox/img/flexbox-guide-1.jpg">
+      </section>
+
+      <section>
+        <h2>伸缩容器属性</h2>
+        <h4>flex-direction:这个主要用来创建主轴，从而定义了flex 项目放置在伸缩容器的方向</h4>
+        <ul>
+          <li>row(默认值)：在“ltr”排版方式下从左向右排列；在“rtl”排版方式下从右向左排列</li>
+          <li>row-reverse：与row排列方向相反，在“ltr”排版方式下从右向左排列；在“rtl”排版方式下从左向右排列</li>
+          <li>column: 类似于row，不过是从上到下排列</li>
+          <li>column-reverse: 类似于row-reverse，不过是从下到上排列。</li>
+        </ul>
+      </section>
+
+      <section>
+        <img src="css-flexbox/img/flexbox-guide-7.jpg">
+      </section>
+
+      <section>
+        <h2>伸缩容器属性</h2>
+        <h4>flex-wrap:单行还是多行显示，侧轴的方向决定了新行堆放的方向</h4>
+        <ul>
+          <li>nowrap(默认值)：伸缩容器单行显示</li>
+          <li>wrap：伸缩容器多行显示</li>
+          <li>wrap-reverse: 伸缩容器多行显示,方向与wrap相反</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>伸缩容器属性</h2>
+        <h4>flex-flow: 是“flex-direction”和“flex-wrap”属性的缩写版本</h4>
+        <img src="css-flexbox/img/flexbox-guide-18.jpeg">
+      </section>
+
+      <section>
+        <h2>伸缩容器属性</h2>
+        <h4>justify-content: 主要定义了伸缩项目在主轴上的对齐方式</h4>
+        <ul style="font-size:40px;">
+          <li>flex-start(默认值): 让所有伸缩项目向主轴开始方向对齐</li>
+          <li>flex-end: 让所有伸缩项目向主轴结束方向对齐</li>
+          <li>center：居中对齐</li>
+          <li>space-between：伸缩项目会平均地分布在行里。让除了第一个和最后一个伸缩项目，其余伸缩项目的两者间间距相同</li>
+          <li>space-around: 伸缩项目会平均地分布在行里，两端各保留一半的空间</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>伸缩容器属性</h2>
+        <h4>align-items: 主要定义了伸缩项目在侧轴上的对齐方式</h4>
+        <ul style="font-size:40px;">
+          <li>flex-start: 让所有伸缩项目向侧轴开始方向对齐</li>
+          <li>flex-end: 让所有伸缩项目向侧轴结束方向对齐</li>
+          <li>center：在侧轴上居中对齐</li>
+          <li>baseline：伸缩项目根据他们的基线对齐</li>
+          <li>stretch(默认值): 伸缩项目拉伸填充整个伸缩容器</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>伸缩容器属性</h2>
+        <h4>align-content: 会更改flex-wrap行为，它是用来对齐伸缩行的</h4>
+        <ul style="font-size:40px;">
+          <li>flex-start: 各行向伸缩容器侧轴起点位置堆叠</li>
+          <li>flex-end: 各行向伸缩容器侧轴结束位置堆叠</li>
+          <li>center：各行向伸缩容器侧轴中间位置堆叠</li>
+          <li>space-between：各行在伸缩容器中平均分布</li>
+          <li>space-around: 各行在伸缩容器中平均分布，两端各保留一半的空间</li>
+          <li>stretch(默认值): 各行将会伸展以占用额外的空间</li>
+        </ul>
+      </section>
+
+      <section>
+        <img src="css-flexbox/img/eyes.jpeg"/>
+      </section>
+
+      <section>
+        <h2>伸缩项目属性</h2>
+        <h4>order: 默认情况下，伸缩项目是按照文档流出现先后顺序排列。然而，“order”属性可以控制伸缩项目在他们的伸缩容器出现的顺序</h4>
+        <ul>
+          <li>order: integer(用整数值来定义排列顺序，数值小的排在前面。可以为负值。默认值为：0)</li>
+        </ul>
+      </section>
+      
+      <section>
+        <h2>伸缩项目属性</h2>
+        <h4>flex-grow: 定义伸缩项目的扩展能力</h4>
+        <ul>
+          <li>flex-grow:(number) (不允许为负值 默认值为： 0)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>伸缩项目属性</h2>
+        <h4>flex-shrink: 定义伸缩项目的收缩能力</h4>
+        <ul>
+          <li>flex-shrink: (number) (不允许为负值 默认值为： 1)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>伸缩项目属性</h2>
+        <h4>flex-basis: 设置伸缩基准值</h4>
+        <ul>
+          <li>flex-basis: (length) | auto (默认值为： auto)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>伸缩项目属性</h2>
+        <h4>flex: flex-grow、flex-shrink和flex-basis三个属性的简写</h4>
+        <img src="css-flexbox/img/flexbox-guide-47.jpeg">
+      </section>
+
+      <section>
+        <h2>伸缩项目属性</h2>
+        <h4>align-self: 在单独的伸缩项目上覆写默认的对齐方式</h4>
+        <ul style="font-size:40px;">
+          <li>auto(默认值): 继承父元素的align-items值，如果没有父元素则设置为stretch</li>
+          <li>flex-start: 让目标项目对齐到侧轴开始的位置</li>
+          <li>flex-end: 让目标项目对齐到侧轴结束的位置</li>
+          <li>center：让目标项目在侧轴上居中对齐</li>
+          <li>baseline：将目标项目沿着基线对齐</li>
+          <li>stretch: 将目标项目在侧轴方向上拉伸，填满可用空间</li>
+        </ul>
+      </section>
+
+      <section>
+        <h4>现在你差不多已经为有趣的部分做好准备了</h4>
+        <img src="css-flexbox/img/happy.jpeg">
+      </section>
+
+      <section>
+        <h2>绝对和相对伸缩</h2>
+        <ul>
+          <li>相对伸缩: 以项目内容大小为基准值伸缩</li>
+          <li>绝对伸缩: 以0为基准值开始伸缩</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>margin:auto</h2>
+        <h4>在伸缩项目上使用margin：auto 值为auto的方向会占据所有剩余空间</h4>
+      </section>
+
+      <section>
+        <h2>
+          <a href="https://philipwalton.github.io/solved-by-flexbox/" target="_blank">Flexbox 已经解决的问题</a>
+        </h2>
+      </section>
+
+      <section>
+        <h2><a href="http://caniuse.com/#feat=flexbox" target="_blank">Flexbox 兼容性</a></h2>
+      </section>
+
+      <section>
+        <h2>
+          <a href="https://github.com/philipwalton/flexbugs" target="_blank">Flexbox 兼容性的坑</a>
+        </h2>
+      </section>
+
+      <section>
+        <h1>Thanks</h1>
+      </section>
+
+    </div>
+
+  </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.min.js"></script>
+
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    mouseWheel: false,
+    keyboard: true,
+
+    theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+    transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/fade/none
+
+    // Parallax scrolling
+    // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+    // parallaxBackgroundSize: '2100px 900px',
+
+    // Optional libraries used to extend on reveal.js
+    dependencies: [{
+      src: 'lib/js/classList.js',
+      condition: function() {
+        return !document.body.classList;
+      }
+    }, {
+      src: 'plugin/markdown/marked.js',
+      condition: function() {
+        return !!document.querySelector('[data-markdown]');
+      }
+    }, {
+      src: 'plugin/markdown/markdown.js',
+      condition: function() {
+        return !!document.querySelector('[data-markdown]');
+      }
+    }, {
+      src: 'plugin/highlight/highlight.js',
+      async: true,
+      callback: function() {
+        hljs.initHighlightingOnLoad();
+      }
+    }, {
+      src: 'plugin/zoom-js/zoom.js',
+      async: true,
+      condition: function() {
+        return !!document.body.classList;
+      }
+    }, {
+      src: 'plugin/notes/notes.js',
+      async: true,
+      condition: function() {
+        return !!document.body.classList;
+      }
+    }]
+  });
+  </script>
+</body>
+
+</html>
