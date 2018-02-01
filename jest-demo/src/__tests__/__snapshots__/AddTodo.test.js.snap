@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddTodo AddTodo snapshot 1`] = `
+<div
+  className="todo-new"
+>
+  <h1>
+    todos
+  </h1>
+  <input
+    className="todo-input"
+    onKeyUp={[Function]}
+    placeholder="input todo item"
+    type="text"
+  />
+</div>
+`;

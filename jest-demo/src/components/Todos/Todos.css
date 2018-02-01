@@ -1,0 +1,40 @@
+.todo-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    background: #eee;
+    padding: 20px;
+}
+
+.todo-new h1 {
+    margin: 0;
+    color: red;
+    font-size: 5em;
+    font-weight: normal;
+    opacity: .5;
+}
+
+.todo-input {
+    line-height: 35px;
+    width: 50%;
+    padding: 10px;
+    font-size: 1em;
+}
+.todo-list {
+    list-style: none;
+    padding: 0;
+    width: 50%;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1em;
+    line-height: 35px;
+}
+
+.todo-list > .completed {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.todo-item input {
+    margin: 0 10px 0 -10px;
+}

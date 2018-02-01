@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Todo done snapshot 1`] = `
+<li
+  className="completed"
+>
+  <div
+    className="todo-item"
+  >
+    <input
+      onClick={[Function]}
+      type="checkbox"
+    />
+    <label>
+      todo-1
+    </label>
+  </div>
+</li>
+`;
+
+exports[`Todo todos snapshot 1`] = `
+<li
+  className=""
+>
+  <div
+    className="todo-item"
+  >
+    <input
+      onClick={[Function]}
+      type="checkbox"
+    />
+    <label>
+      todo-1
+    </label>
+  </div>
+</li>
+`;
